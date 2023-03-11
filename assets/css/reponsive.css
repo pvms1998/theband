@@ -1,0 +1,85 @@
+/* PC */
+@media (min-width: 1024px) {
+    .pc {
+        display: block;
+    }
+}
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+    .tablet {
+        display: block;
+    }
+}
+/* Tablet && Mobile*/
+@media (max-width: 1023px) {
+    .maps-btn {
+        padding: 15px 16px;
+    }
+    #footer .icon-footer {
+        font-size: 24px;
+        margin: 0 15px;
+    }
+    .contant-info {
+        line-height: 2;
+    }
+    .contant-info a {
+        color: #ddd;
+        text-decoration: none;
+    }
+    .contant-info a:hover {
+        color: darkcyan;
+    }
+    
+}
+/* Mobile */
+@media (max-width: 739px) {
+    #header {
+        overflow: hidden;
+    }
+    #nav > li {
+        display: block;
+        position: relative;
+    }
+    #nav .subnav {
+        position: initial;
+        background-color: #333;
+    }
+    #nav .subnav a {
+        color: #fff;
+    }
+    #nav .subnav li {
+        display: block;
+        padding: 5px 35px;
+    }
+    #header .search-btn {
+        display: none;
+    }
+    #header .mobile-menu {
+        display: block;
+    }
+    #nav > li:first-child {
+        display: inline-block;
+    }
+    .col-third {
+        width: 100%;
+    }
+    .maps  {
+        float: left;
+        width: 33.33333%;
+    }
+    .custom  {
+        width: 100% !important;
+        float: left;
+    }
+    .custom .contant-name {
+        margin-top: 15px;
+        margin-bottom: 5px;
+        width: 100%;
+    }
+    .custom .contant-email {
+        width: 100%;
+    }
+    .text-content {
+        display: none;
+    }
+}

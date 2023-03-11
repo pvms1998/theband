@@ -1,0 +1,128 @@
+.modal {
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.4);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+  @keyframes move {
+    from {
+        opacity: 0;
+        transform: translateY(-140px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+/*.modal-container {
+    position: relative;
+    background-color: #fff;
+    width:600px;
+    min-height: 400px;
+}
+/* @media (min-width: 904px) {
+    .modal-container {
+        position: relative;
+        background-color: #fff;
+        width:900px;
+        min-height: 400px;
+    }
+} */ /* có thể sử dụng cách khác*/
+.modal-container {
+    position: relative;
+    background-color: #fff;
+    width:800px;
+    max-width: calc(100% - 32px); /* pp thay thế*/
+    min-height: 400px;
+    animation: move 0.4s ease-out;
+    box-shadow: 0 4px 10px 0 rgb(0 0 0 / 20%), 0 4px 20px 0 rgb(0 0 0 / 19%);
+}
+.modal .modal-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #ccc;
+    padding: 8px 12px;
+}
+.modal .header-modal{
+    background-color: #107c58;
+    padding: 32px 16px;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 12px;
+}
+.icon-buy {
+    font-size: 30px;
+}
+.modal .tittle-header {
+    display: inline;
+    font-weight: 50;
+    margin: 10px 0;
+    padding-left: 10px;
+}
+
+.modal-close:hover {
+    background-color: #ccc;
+    color: #080808;
+}
+.body-modal {
+    padding: 0px 16px;
+}
+.body-modal .modal-label {
+    margin-bottom: 12px;
+    display: block;
+}
+.body-modal input  {
+    margin-bottom: 12px;
+    border: 1px #ddd solid;
+}
+.body-modal input {
+    padding: 8px 8px;
+    width: 100%;
+    box-sizing: border-box;
+}
+.ti-check {
+    font-size: 14px;
+    font-weight: bold;
+    padding-left: 10px;
+}
+.pay-btn {
+    width: 100%;
+    margin: 16px 0px;
+    padding: 16px 16px;
+    background-color: #107c58;
+    color: #fff;
+    font-weight: bold;
+    border: 0;
+}
+.pay-btn:hover {
+    background-color: #ccc;
+    color: #080808;
+    cursor: pointer;
+}
+.btn-close {
+    background-color: red;
+    color: #fff;
+    padding: 10px;
+    border: 0 #fff solid;
+    margin-left: 16px;
+}
+.btn-close:hover {
+    background-color: #ccc;
+    color: #080808;
+    cursor: pointer;
+}
+.ticketend {
+    float: right;
+    color: #5e5c5c;
+    text-align: center;
+    margin-right: 16px;
+    box-sizing: border-box;
+}

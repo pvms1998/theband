@@ -1,0 +1,367 @@
+/* Reset CSS */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* 
+    1. Từ ngoài vào trong
+    2. Từ trên xuống dưới
+    3. Tổng quan đến chi tiêt
+*/
+/*
+    1. Kich thước
+    2. Kích thước (width, height)
+    3. Màu sắc
+    4. Kiểu dáng (kiểu chữ, hình tròn, ...)
+ */
+ /* Comom dùng chung*/
+.clear {
+    clear: both;
+
+ }
+ .row {
+    margin-left: -8px;
+    margin-right: -8px;
+}
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.col {
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.col-full {
+    width: 100%;
+}
+.col-half {
+    width: 50%;
+} /* 2 cột */
+.col-third {
+    width: 33.33333%;
+} /* 3 cột */
+ /* Main */
+#main {
+
+}
+#header {
+    height: 47px;
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+#nav {
+    /* display: inline-block; Chỉ hiện thị đúng kích thước */
+}
+#nav li {
+    display: inline-block;
+    position: relative;
+}
+#nav >li > a {
+    color: #fff;
+    text-transform: uppercase;
+}
+#nav li a {
+    text-decoration: none;
+    line-height: 47px;
+    padding: 0 24px;
+    width: 100%;
+}
+#nav li:hover .subnav {
+    display: block;
+}
+#nav > li:hover > a{
+    display: inline-block;
+    color: #000;
+    background-color: #ccc !important;
+    /* position: relative; */
+}   
+#nav .subnav {
+    position: absolute; /* phụ thuộc vào thẻ của More nên phải đứng chúng dòng*/
+    background-color: #fff;
+    box-shadow: 0 0 10px  rgba(0,0,0,0.2);
+    display: none;
+    top: 100%;
+    left: 0;
+}
+#nav .subnav a {
+    color: #000;
+    padding-left: 12px;
+    padding-right: 70px;
+}
+#nav .subnav li:hover {
+    display: block;
+    background-color: #ccc;
+}
+#nav .nav-arrow-down {
+    font-size: 14px;
+}
+#header .mobile-menu {
+    color: #fff;
+    line-height: 46px;
+    padding: 0 21px;
+    position: absolute;
+    top:0;
+    right: 0;
+    display: none;
+}
+#header .search-btn {
+    color: #fff;
+    line-height: 46px;
+    padding: 0 21px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+#header .mobile-menu:hover {
+    background-color: #ccc;
+    color: #000;
+}
+#header .search-btn:hover {
+    background-color: crimson;
+    cursor: pointer; /* Thuộc tính di chuột*/
+}
+
+#slider {
+    position: relative;
+    margin-top: 46px;  
+    padding-top: 43%;
+    background: url('../slider/slider1.jpg') top center / cover no-repeat;
+    transition: background-image 2s ease;
+}
+/* #slider:hover {
+    background-image: url('/assets/slider/slider2.jpg'), url('/assets/slider/slider1.jpg');
+} */
+#slider .text-content {
+    position: absolute;
+    bottom: 40px;
+    color: #fff;
+    /* left: 50%;
+    transform: translateX(-50%); */
+    /* left: 0;
+    right:0; */
+    width: 100%;
+    text-align: center;
+}
+#slider .text-heading {
+    font-weight: 400;
+    font-size: 22px;
+}
+#slider .text-des {
+    font-size: 15px;
+    margin-top: 20px;
+}
+#content {
+    position: relative;
+}
+#content .content-section {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 64px 16px;
+    max-width: 850px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#content .section-heading {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 400; /* độ dài của chữ */
+}
+#content .section-sub-heading {
+    text-align: center;
+    margin: 15px 0;
+    font-size: 15px;
+    font-style: italic; /* độ in nghiêng*/
+    opacity: 0.6; /* độ mờ chữ */
+}
+#content .section-des {
+    text-align: center;
+    margin: 15px 0;
+    font-size: 15px;
+    line-height: 1.5; /* dãn cách dòng */
+    text-align: justify; /* căn chỉnh trung tâm */
+}
+#content .member-list {
+    text-align: center;
+    padding: 32px 0;
+    font-size: 15px;
+}
+#content .member-item {
+    width: 100%;
+}
+#content .member-name {
+    margin: 15px;
+}
+
+#content .member-img {
+    margin-bottom: 16px;
+    width: 60%;
+    border-radius: 4px; /* khung viền*/
+    vertical-align: middle
+}
+
+.tour-section {
+    background-color: #000;
+    color: #fff;
+    width: 100%;
+
+}
+.tour-section .ticket-list {
+    list-style: none; /* bỏ chấm */
+    color: #5e5c5c;
+    background-color: #fff;
+    text-align: left;
+    border: 1px solid #ccc!important;
+    margin-top: 40px;
+}
+.tour-section li {
+    padding: 8px 16px;
+    border-bottom: 1px solid #ddd;
+}
+.tour-section .sold-out {
+    background-color: rgb(212, 26, 26);
+    padding: 0 8px;
+    color: #fff;
+    margin-left: 16px;
+    display: inline-block;
+}
+.tour-section .quanity {
+    padding: 0 8px;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    background-color: #000;
+    color: #fff;
+    float: right;
+    margin-right: 15px;
+    line-height: 24px;
+}
+.maps-lists {
+    padding: 32px 8px;
+    margin: 0 -16px;
+}
+
+.maps-img {
+    width: 100%;
+    display: block;
+    padding-top: 8px;
+}
+.maps-img:hover {
+    opacity: 0.6;
+}
+.maps-info {
+    width: 100%;
+    background-color: #fff;
+    padding: 0 16px;
+}
+
+.maps-location {
+    color: #000;
+    font-weight: bold;
+    padding: 12px 0;
+}
+.maps-time {
+    color: rgba(0,0,0,0.8);
+    margin: 15px 0;
+}
+.maps-txt {
+    color: #000;
+    margin: 15px 0px;
+}
+.maps-btn {
+    color: #fff;
+    background-color: #000;
+    padding: 8px 16px;
+    margin-bottom: 16px;
+    cursor: pointer;
+}
+.maps-btn:hover {
+    color: #000;
+    background:#ccc;
+}
+
+/* Contant */
+.contant-section {
+}
+.information {
+    padding: 32px 0;
+    display: inline;
+}
+.information .contant {
+    display: inline-block;
+    margin: 0px -16px 8px -16px;
+    width: 49% !important;
+}
+.information p {
+    display: inline-block;
+    padding-left: 16px;
+    font-weight:550;
+}
+.custom {
+    float: right;
+}
+
+.custom .input-info {
+    display: inline-block;
+}
+.custom .contant {
+    padding: 0 8px;
+}
+.custom .contant-name {
+   width: 49.4%;
+   padding: 8px;
+   border: 1px solid #ccc!important;
+}
+.custom .contant-email {
+    border: 1px solid #ccc!important;
+    width: 49.4%;
+    padding: 8px;
+}
+.custom .contant-message {
+    width: 100%;
+    padding: 8px;
+    margin-top: 8px;
+    border: 1px solid #ccc!important;
+}
+.custom .contant-btn {
+    float: right;
+    padding: 10px;
+    margin: 16px 5px;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+}
+#footer {
+    height: 500px;
+}
+#footer .streets {
+    padding-top: 43%; /* làm cho ảnh xuất hiện 43%)*/
+    background: url('/assets/img/map.jpg') top center / cover no-repeat;
+    max-width: 100%;
+    filter: grayscale(50%);
+    top: 0;
+}
+#footer .footer-content {
+    padding: 64px 16px;
+}
+#footer .icon-footer {
+    text-align: center;
+    font-size: 20px;
+}
+#footer .footer-link {
+    margin: 15px;
+    text-align: center;
+    color: #5e5c5c;
+}
+#footer a {
+    color: #5e5c5c;
+}

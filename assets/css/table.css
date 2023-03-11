@@ -1,0 +1,43 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    position: relative;
+}
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.row {
+    margin-left: -8px;
+    margin-right: -8px;
+}
+.col {
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.col-half {
+    width: 50%;
+} /* 2 cột */
+.col-third {
+    width: 33.33333%;
+} /* 3 cột */
+.maps-lists {
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+.maps-img {
+    width: 80%;
+    text-align: center;
+}
+.maps-info {
+    width: 100%;
+    background-color: #fff;
+    line-height: 1.5;
+    padding: 0.15px 16px;
+}
+.maps-txt {
+    color: #000;
+    margin: 15px 0px;
+}
