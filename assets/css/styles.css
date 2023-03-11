@@ -345,7 +345,7 @@ html {
 }
 #footer .streets {
     padding-top: 43%; /* làm cho ảnh xuất hiện 43%)*/
-    background: url('/assets/img/map.jpg') top center / cover no-repeat;
+    background: url('../img/map.jpg') top center / cover no-repeat;
     max-width: 100%;
     filter: grayscale(50%);
     top: 0;
